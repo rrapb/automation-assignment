@@ -2,7 +2,7 @@
   "name": "the-internet-ui-tests",
   "version": "1.0.0",
   "scripts": {
-    "test": "cucumber-js e2e/features --require-module ts-node/register --require e2e/support/world.ts --require e2e/steps/**/*.ts --format progress"
+    "test": "cucumber-js e2e/features --require-module ts-node/register --require e2e/steps/**/*.ts --require e2e/support/**/*.ts"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.0.0",
