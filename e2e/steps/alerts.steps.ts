@@ -47,6 +47,6 @@ Then('the alert message should be {string}', async function (expected: string) {
     expect(lastDialogMessage).toBe(expected);
 });
 
-Then('I should see {string}', async function (msg: string) {
+Then('I should see the JS alert result {string}', async function (msg: string) {
     await expect(this.page.locator('#result')).toHaveText(msg);
 });
