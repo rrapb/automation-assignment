@@ -5,5 +5,7 @@ reports/
 
 test-results/
 playwright-report/
+cucumber_report.json
+reports/
 
 *.log

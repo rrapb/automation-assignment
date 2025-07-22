@@ -25,7 +25,7 @@ npx playwright install
 ```bash
 npm test
 ```
-## Running tests in multiple browsers
+## Running tests in multiple browsers and View HTML Report
 
 To run tests in different browsers, use the predefined npm scripts that set the BROWSER environment variable:
 
@@ -35,14 +35,14 @@ npm run test:firefox
 npm run test:webkit
 ```
 
-
 ## Structure
 - `features/`: Gherkin specs  
 - `steps/`: Cucumber step definitions  
-- `support/hooks.ts`: Initializes and cleans up the Playwright browser, context, and page before and after each scenario using Cucumber hooks  
-- `support/world.ts`: Defines the custom World interface to expose Playwright's browser, context, and page to all step definitions  
-- `test-data/`: Sample files for upload  
+- `support/hooks.ts`: Initializes and cleans up the Playwright browser, context, and page before and after each scenario using Cucumber hooks
+- `test-data/`: Sample files for upload
+- `reports/`: Cucumber HTML reports
 
 ## What to Expect
 - Clear scenarios
 - Clean multi-browser execution
+- Cucumber JSON & HTML reports

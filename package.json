@@ -2,10 +2,12 @@
   "name": "the-internet-ui-tests",
   "version": "1.0.0",
   "scripts": {
-    "test": "cucumber-js e2e/features --require-module ts-node/register --require e2e/steps/**/*.ts --require e2e/support/**/*.ts",
-    "test:chromium": "BROWSER=chromium npm test",
-    "test:firefox": "BROWSER=firefox npm test",
-    "test:webkit": "BROWSER=webkit npm test"
+    "test": "cucumber-js --config cucumber.config.js",
+    "generate-report": "node generate-report.mjs",
+    "test:report": "npm run test; sleep 1; npm run generate-report",
+    "test:chromium": "BROWSER=chromium npm run test:report",
+    "test:firefox": "BROWSER=firefox npm run test:report",
+    "test:webkit": "BROWSER=webkit npm run test:report"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.6.0",
@@ -13,6 +15,7 @@
     "@playwright/test": "^1.54.1",
     "@types/node": "^18.0.0",
     "cucumber-html-reporter": "^6.0.0",
+    "open": "^10.2.0",
     "playwright": "^1.35.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
