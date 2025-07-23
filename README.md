@@ -18,7 +18,7 @@
 git clone https://github.com/rrapb/automation-assignment.git
 cd automation-assignment
 npm install
-npx playwright install~~
+npx playwright install
 ```
 
 ## Running tests in multiple browsers and View HTML Report
