@@ -15,8 +15,8 @@
 
 ## Setup
 ```bash
-~~git clone https://github.com/rrapb/automation-assignment.git
-cd cd automation-assignment
+git clone https://github.com/rrapb/automation-assignment.git
+cd automation-assignment
 npm install
 npx playwright install~~
 ```
