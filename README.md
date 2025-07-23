@@ -59,11 +59,6 @@ npm run test:single:report -- e2e/features/upload.feature
 - Clean multi-browser execution
 - Cucumber JSON & HTML reports
 
-## CI Integration (Azure Pipelines)
-
-If integrated into a CI/CD workflow, the following Azure Pipelines configuration can be used to automatically install dependencies, run Playwright tests, and publish test reports on failure.
-
-> This assumes the project is already configured with all test scripts as described above.
 
 ## CI Integration (Azure Pipelines)
 
