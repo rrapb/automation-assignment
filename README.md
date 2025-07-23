@@ -26,6 +26,7 @@ npx playwright install
 Before running the commands below, make sure you're using **Node.js v20**.  
 If you're using `nvm`, run: 
 ```bash
+nvm install 20
 nvm use 20
 ```
 
