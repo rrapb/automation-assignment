@@ -55,3 +55,8 @@ npm run test:single:report -- e2e/features/upload.feature
 - Clear scenarios
 - Clean multi-browser execution
 - Cucumber JSON & HTML reports
+
+## Documentation
+
+You can find the detailed **Test Plan** in the [`docs/test-plan.md`](docs/test-plan.md) file.
+
