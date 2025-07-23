@@ -44,7 +44,7 @@ Each test is designed to run independently and validate one specific functionali
 
 ## Test Data
 
-- **File Upload**: Uses `testfile.txt` located in the test-data folder in project root.
+- **File Upload**: Uses `testfile.txt` located in the test-data folder.
 
 ---
 
