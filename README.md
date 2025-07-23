@@ -35,6 +35,15 @@ npm run test:firefox
 npm run test:webkit
 ```
 
+## Running a Single Test with Report Generation
+npm run test:single:report -- e2e/features/file.feature
+
+Example:
+To run the upload.feature file and generate the report in one command:
+```bash
+npm run test:single:report -- e2e/features/upload.feature
+```
+
 ## Structure
 - `features/`: Gherkin specs  
 - `steps/`: Cucumber step definitions  

@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "test": "cucumber-js --config cucumber.config.js",
+    "test:single": "cucumber-js --config cucumber.config.js --profile single",
     "generate-report": "node generate-report.mjs",
     "test:report": "npm run test; sleep 1; npm run generate-report",
     "test:chromium": "BROWSER=chromium npm run test:report",
     "test:firefox": "BROWSER=firefox npm run test:report",
-    "test:webkit": "BROWSER=webkit npm run test:report"
+    "test:webkit": "BROWSER=webkit npm run test:report",
+    "test:single:report": "node run-single-report.js"
   },
+
   "devDependencies": {
     "@cucumber/cucumber": "^9.6.0",
     "@cucumber/pretty-formatter": "^2.0.1",
