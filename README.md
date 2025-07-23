@@ -21,11 +21,13 @@ npm install
 npx playwright install
 ```
 
-## Run Locally
-```bash
-npm test
-```
 ## Running tests in multiple browsers and View HTML Report
+
+Before running the commands below, make sure you're using **Node.js v20**.  
+If you're using `nvm`, run: 
+```bash
+nvm use 20
+```
 
 To run tests in different browsers, use the predefined npm scripts that set the BROWSER environment variable:
 
@@ -55,6 +57,46 @@ npm run test:single:report -- e2e/features/upload.feature
 - Clear scenarios
 - Clean multi-browser execution
 - Cucumber JSON & HTML reports
+
+## CI Integration (Azure Pipelines)
+
+If integrated into a CI/CD workflow, the following Azure Pipelines configuration can be used to automatically install dependencies, run Playwright tests, and publish test reports on failure.
+
+> This assumes the project is already configured with all test scripts as described above.
+
+## CI Integration (Azure Pipelines)
+
+If integrated into a CI/CD workflow, the following Azure Pipelines configuration can be used to automatically install dependencies, run Playwright tests, and publish test reports on failure.
+
+> This assumes the project is already configured with all test scripts as described above.
+
+```yaml
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - script: |
+      npm ci
+      npx playwright install --with-deps
+    displayName: 'Install dependencies and Playwright'
+
+  - script: |
+      npm run test:report
+    displayName: 'Run full test suite and generate report'
+
+  - task: PublishPipelineArtifact@1
+    condition: failed()
+    inputs:
+      targetPath: cucumber-report
+      artifactName: cucumber-report
+      publishLocation: 'pipeline'
+    displayName: 'Upload Cucumber report on failure'
+```
 
 ## Documentation
 
