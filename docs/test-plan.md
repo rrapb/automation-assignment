@@ -55,7 +55,6 @@ Each test is designed to run independently and validate one specific functionali
 | All tests run successfully           |  |
 | Cross-browser compatibility verified |  |
 | Feature coverage matches requirements|  |
-| CI pipeline completes without errors |  |
 
 ---
 
